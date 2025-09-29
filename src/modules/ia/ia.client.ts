@@ -12,14 +12,14 @@ interface GenerateOptions {
   prompt?: string
   imagePath?: string           // Ruta a imagen local
   mimeType?: string            // image/png, image/jpeg
-  model?: 'gemini-2.0-pro' | 'gemini-2.0-vision' | 'gemini-2.0-flash'
+  model?: 'gemini-2.0-pro' | 'gemini-2.0-vision' | 'gemini-2.5-flash'
 }
 
 export async function generateWithAI({
   prompt = '',
   imagePath,
   mimeType = 'image/png',
-  model = 'gemini-2.0-pro',
+  model = 'gemini-2.5-flash',
 }: GenerateOptions): Promise<string> {
   const genModel = genAI.getGenerativeModel({ model })
 

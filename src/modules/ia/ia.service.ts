@@ -8,7 +8,7 @@ export const IAService = {
   async generarTexto(prompt: string): Promise<string> {
     return await generateWithAI({
       prompt,
-      model: 'gemini-2.0-flash',
+      model: 'gemini-2.5-flash',
     })
   },
 
@@ -26,7 +26,7 @@ export const IAService = {
       prompt,
       imagePath,
       mimeType,
-      model: 'gemini-2.0-flash'
+      model: 'gemini-2.5-flash'
     })
   },
 }
