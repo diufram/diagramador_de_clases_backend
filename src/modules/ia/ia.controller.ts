@@ -14,7 +14,6 @@ export async function generarTextoHandler(req: Request, res: Response) {
 }
 
 export async function generarDesdeImagenHandler(req: Request, res: Response) {
-  console.log("ENTRO")
   try {
     const imagePath = req.file?.path     // viene desde multer
     const mimeType = req.file?.mimetype  // tipo de archivo
@@ -113,7 +112,7 @@ REGLAS:
       imagePath,
       mimeType,
     })
-        return successResponse(res, resultado, 'Diagrama Generado');
+    return successResponse(res, resultado, 'Diagrama Generado');
   } catch (err: any) {
     res.status(500).json({ message: 'Error al generar desde imagen', error: err.message })
   }
